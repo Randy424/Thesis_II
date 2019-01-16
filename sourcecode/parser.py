@@ -3,7 +3,7 @@ Parser for collecting data from QC files
 """
 import sys
 import os
-#import pandas as pd
+import pandas as pd
 import re
 
 sys.path.append('../data/WTDL_pisces')
@@ -19,3 +19,4 @@ with open(my_file) as file:
     print(file_contents)
 
 data_types = []
+
