@@ -1,7 +1,6 @@
-import sys
 import os
+import sys
 from netCDF4 import Dataset
-
 
 sys.path.append('../data/WTDL_pisces')
 sys.path.append('../data/KAQP_atlantis')
