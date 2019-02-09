@@ -1,6 +1,7 @@
 {
-    "python.pythonPath": "/anaconda3/envs/NN/lib/python3.6/site-packages",
+    "python.pythonPath": "/anaconda3/envs/NN/bin/python",
     "python.envFile": "/anaconda3/envs/NN/lib/python3.6/site-packages",
     "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "python.venvPath": "/anaconda3/envs/NN/lib/python3.6/site-packages"
 }
