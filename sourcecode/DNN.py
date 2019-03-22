@@ -3,7 +3,6 @@ import os
 import sys
 import numpy as np
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
-import pandas as pd
 import keras
 from keras.datasets import mnist
 from keras.models import Sequential
@@ -88,6 +87,7 @@ print('Test loss:', score[0])
 print('Test accuracy:', score[1])
 """
 """
+#display_data()
 
 
 
