@@ -7,12 +7,8 @@ import pandas as pd
 import glob
 
 
-
-
 sys.path.append('../data/WTDL_pisces')
 sys.path.append('../data/KAQP_atlantis')
-
-
 
 
 flag_classes = np.array([b'A', b'B', b'C', b'D', b'E', b'F',
@@ -72,6 +68,76 @@ def load_data():
           bad_counter += 1
 
   return flags, atmospheric_pressure
+
+def load_data_custom(variable):
+
+  #Collecting data from NetCDF files
+  #Will start with pressure variable
+  
+  THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+  my_file = os.path.join(THIS_FOLDER, '../data/WTDL_pisces/research/2012/*.nc')
+
+  variable_data = []
+  flags = []
+  atmospheric_pressure = []
+  bad_counter = 0 
+  counter = 0
+  paths = sorted(glob.glob(my_file))
+  paths = paths[1:5]
+  for file in paths:
+      
+      my_file = file
+      dataset = Dataset(my_file, 'r', format="NETCDF4")
+
+      #checking flag dimension
+      flag_array = (dataset.variables['flag'][0])
+      
+      if len(flag_array) == 15:
+          counter += 1
+          #print(len(flag_array))
+          variable_data.extend((dataset.variables[variable][:]))
+          """
+          """
+
+      else:
+          bad_counter += 1
+
+  return variable_data
+
+def load_data_custom_path(variable, index, path = '../data/WTDL_pisces/research/2012/*.nc'):
+
+  #Collecting data from NetCDF files
+  #Will start with pressure variable
+  
+  THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+  my_file = os.path.join(THIS_FOLDER, path)
+
+  variable_data = []
+  flags = []
+  atmospheric_pressure = []
+  bad_counter = 0 
+  counter = 0
+  paths = sorted(glob.glob(my_file))
+  paths = paths[index:index+1]
+  #print(paths)
+  for file in paths:
+      my_file = file
+      dataset = Dataset(my_file, 'r', format="NETCDF4")
+      print(dataset.variables['P'].qcindex)
+      #checking flag dimension
+      flag_array = (dataset.variables['flag'][0])
+      
+      if len(flag_array) == 15:
+          counter += 1
+          #print(len(flag_array))
+          variable_data.extend((dataset.variables[variable][:]))
+          """
+          """
+
+      else:
+          bad_counter += 1
+
+  return variable_data
 
 def load_all_data():
 
