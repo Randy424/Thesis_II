@@ -190,4 +190,27 @@ def load_all_data():
 
   return flags, atmospheric_pressure
 
+def load_data_custom_path_single(variable, path):
 
+    #Collecting variable (data & flag) from NetCDF files
+    
+    THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+    my_file = os.path.join(THIS_FOLDER, path)
+
+    variable_data = []
+    flag_data = []
+    my_file = path
+    dataset = Dataset(my_file, 'r', format="NETCDF4")
+
+    try:
+        #print(dataset.variables[variable].qcindex)
+        index = dataset.variables[variable].qcindex
+    except:
+        print(f"no {variable} variable in: ", path)
+        return None, 0
+
+    variable_data.extend((dataset.variables[variable][:]))
+    flag_data.extend((dataset.variables['flag'][:]))
+    #print(variable_data)
+            
+    return variable_data,flag_data,index
