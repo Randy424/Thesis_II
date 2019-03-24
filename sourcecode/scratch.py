@@ -14,4 +14,3 @@ for count, item in enumerate(paths):
     if b'K' not in flag_count:
         print(item)
         print(flag_count)
-        
