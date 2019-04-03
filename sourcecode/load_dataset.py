@@ -29,7 +29,7 @@ def load_data():
   bad_counter = 0 
   counter = 0
   paths = sorted(glob.glob(my_file))
-  paths = paths[1:5]
+  paths = paths[1:2]
   for file in paths:
       
       my_file = file
@@ -213,4 +213,8 @@ def load_data_custom_path_single(variable, path):
     flag_data.extend((dataset.variables['flag'][:]))
     #print(variable_data)
             
-    return variable_data,flag_data,index
+    return variable_data,flag_data,index-1
+
+if __name__ == "__main__":
+    data, atmospheric_pressure = load_data()
+    print("data points: ",len(data))
