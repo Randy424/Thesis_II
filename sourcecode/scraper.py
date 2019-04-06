@@ -11,6 +11,7 @@ def find_flags(flag_variable):
     THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
     my_file = os.path.join(THIS_FOLDER, '/Net/samosproc/data/public/research/*')
     ships_paths = glob.glob(my_file)
+    ships_paths.sort()
     filename = f"flag_chart_{flag_variable}.csv"
     build_flag_table(filename)
     #print(ships_paths)
@@ -22,7 +23,7 @@ def find_flags(flag_variable):
                 flag, index = load_data_custom_path_single(flag_variable, nc)
                 flag_count = display_data_flag_spread(flag, index, 'dict')
                 if flag_count == None:
-                    break
+                    pass
                 else:
                     flag_count['filename'] = nc
                     append_to_flag_table(flag_count, filename)
@@ -61,14 +62,14 @@ def display_data_flag_spread(flags, index, rtype=None):
   if flags == None:
       return None
 
-  pressure_flags = [value for sublist in flags for counter,value in 
-  enumerate(sublist) if counter == index-1]
+  variable_flags = [value for sublist in flags for counter,value in 
+  enumerate(sublist) if counter == index-1 and value != b'']
 
   flag_dict = {b'A':0, b'B':0, b'C':0, b'D':0, b'E':0, b'F':0,
     b'G':0, b'H':0, b'I':0, b'J':0, b'K':0, b'L':0, b'M':0, b'N':0,
     b'Q':0, b'S':0, b'Z':0}
   
-  for value in pressure_flags:
+  for value in variable_flags:
     if value not in flag_dict:
       flag_dict[value] = 1
     else:
@@ -92,6 +93,7 @@ def append_to_flag_table(dictionary, filename):
     b'G', b'H', b'I', b'J', b'K', b'L', b'M', b'N', b'Q', b'S', b'Z']
     f = open(filename, 'a+')
     writer = csv.DictWriter(f, fieldnames=flag_classes)
+    print(dictionary)
     writer.writerow(dictionary)
 
 
