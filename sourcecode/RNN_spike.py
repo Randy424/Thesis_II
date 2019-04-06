@@ -6,6 +6,7 @@ import glob
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
 import pandas as pd
 import keras
+import matplotlib.pyplot as pltl
 from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten, SimpleRNN, Activation
@@ -24,7 +25,7 @@ session = tf.Session(config=config)
 
 batch_size = 4
 num_classes = 2
-epochs = 10
+epochs = 2
 hidden_units = 10
 
 #array of data paths
@@ -54,6 +55,14 @@ print(hot_encoding.shape[1])
 #splitting data into training/testing sets
 x_train, x_test, y_train, y_test = train_test_split(atmospheric_pressure, 
 hot_encoding, test_size=0.25, shuffle=False)
+
+di = dict()
+
+for x in y_train:
+    if tuple(x) not in di:
+        di[tuple(x)] = 1
+    else:
+        di[tuple(x)] += 1
 
 x_test = np.array(x_test)
 x_train = np.array(x_train)
@@ -97,7 +106,7 @@ model.add(Dense(num_classes, activation='softmax'))
 model.summary() 
 
 model.compile(loss='categorical_crossentropy',
-              optimizer=RMSprop(),
+              optimizer='adam',
               metrics=['accuracy'])
 
 history = model.fit(x_train, y_train,
@@ -108,11 +117,28 @@ history = model.fit(x_train, y_train,
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
+
+
 """
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+# summarize history for loss
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
 """
-
-
-
 
 
 
