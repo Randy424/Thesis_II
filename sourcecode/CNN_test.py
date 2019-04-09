@@ -24,7 +24,7 @@ session = tf.Session(config=config)
 
 batch_size = 4
 num_classes = 2
-epochs = 10
+epochs = 2
 
 #array of data paths
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
@@ -41,38 +41,28 @@ for file in file_array:
     atmospheric_pressure.extend(atmospheric_pressure_single)
     pressure_flags.extend(pressure_flags_single)
 
-
-
 #label encoding
 le = LabelEncoder()
 int_encoding = le.fit_transform(pressure_flags)
-print("Classes: ",le.classes_, "\n")
+print(le.classes_, "\n")
 
 #one hot encoding
 hot_encoding = keras.utils.to_categorical(int_encoding, num_classes)
-#print(hot_encoding.shape[1])
+print(hot_encoding.shape[1])
 
 #splitting data into training/testing sets
 x_train, x_test, y_train, y_test = train_test_split(atmospheric_pressure, 
 hot_encoding, test_size=0.25, shuffle=False)
 
 di = dict()
-for x in pressure_flags:
-    if x not in di:
-        di[x] = 1
-    else:
-        di[x] += 1
 
-print('total flag dist', di, "\n")
-
-di = dict()
 for x in y_train:
     if tuple(x) not in di:
         di[tuple(x)] = 1
     else:
         di[tuple(x)] += 1
 
-print("training set distribution: ",di, "\n")
+print(di)
 
 print("y_train shape:", y_train.shape)
 
@@ -121,7 +111,7 @@ model.add(Dense(num_classes, activation='softmax'))
 model.summary()
 
 model.compile(loss='categorical_crossentropy',
-              optimizer=Adam(lr= .0000004),
+              optimizer=Adam(lr=.001), 
               metrics=['accuracy'])
 
 history = model.fit(x_train, y_train,
@@ -132,29 +122,50 @@ history = model.fit(x_train, y_train,
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
-"""
-"""
-
-# list all data in history
-print(history.history.keys())
-# summarize history for accuracy
-plt.plot(history.history['acc'])
-plt.plot(history.history['val_acc'])
-plt.title('CNN model accuracy (spike)')
-plt.ylabel('accuracy')
-plt.xlabel('epoch')
-plt.legend(['train', 'test'], loc='upper left')
-plt.show()
-# summarize history for loss
-plt.plot(history.history['loss'])
-plt.plot(history.history['val_loss'])
-plt.title('CNN model loss (spike)')
-plt.ylabel('loss')
-plt.xlabel('epoch')
-plt.legend(['train', 'test'], loc='upper left')
-plt.show()
 
 
+#array of data paths
+my_test_file = os.path.join(THIS_FOLDER, '../data/spike_data/Hidden/*.nc') 
+file_array = glob.glob(my_file)
+atmospheric_pressure = []
+pressure_flags = []
+
+#loading data
+for file in file_array:
+    atmospheric_pressure_single, flags_single, index = load_data_custom_path_single('P',file)
+    pressure_flags_single = [value for sublist in flags_single for counter,value in 
+    enumerate(sublist) if counter == index]
+    atmospheric_pressure.extend(atmospheric_pressure_single)
+    pressure_flags.extend(pressure_flags_single)
+
+#label encoding
+le = LabelEncoder()
+int_encoding = le.fit_transform(pressure_flags)
+print(le.classes_, "\n")
+
+#one hot encoding
+hot_encoding = keras.utils.to_categorical(int_encoding, num_classes)
+print(hot_encoding.shape[1])
+
+#splitting data into training/testing sets
+x_test, y_test = atmospheric_pressure, hot_encoding
+
+x_test = np.array(x_test)
+y_test = np.array(y_test)
 
 
+x_test = x_test.reshape(x_test.shape[0], 1, -1)
+y_test = y_test.reshape(y_test.shape[0], 1, -1)
+x_test = x_test.astype('float32')
+
+#Normalization (for 3D data)
+scalers = {}
+for i in range(x_test.shape[1]):
+    scalers[i] = StandardScaler()
+    x_test[:, i, :] = scalers[i].fit_transform(x_test[:, i, :]) 
+
+
+score_2 = model.evaluate(x_test, y_test, verbose=1)
+print('Experimental Test loss:', score_2[0])
+print('Experimental Test accuracy:', score_2[1])
 
