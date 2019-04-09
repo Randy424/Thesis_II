@@ -4659,9 +4659,12 @@ filename,b'A',b'B',b'C',b'D',b'E',b'F',b'G',b'H',b'I',b'J',b'K',b'L',b'M',b'N',b
 /Net/samosproc/data/public/research/WTDF/2019/WTDF_20190316v30001.nc,0,38,0,0,0,0,0,0,0,0,262,0,0,0,0,0,1140
 /Net/samosproc/data/public/research/WTDF/2019/WTDF_20190306v30001.nc,0,0,0,0,0,0,0,0,0,0,9,0,0,0,0,0,1026
 /Net/samosproc/data/public/research/WTDF/2019/WTDF_20190309v30001.nc,0,0,0,0,0,0,0,0,0,0,276,0,0,0,0,0,1164
+/Net/samosproc/data/public/research/WTDF/2019/WTDF_20190329v30001.nc,0,0,0,0,0,0,0,0,0,0,644,0,0,0,0,0,796
 /Net/samosproc/data/public/research/WTDF/2019/WTDF_20190326v30001.nc,0,0,0,0,0,0,2,0,0,0,396,0,0,0,0,0,343
 /Net/samosproc/data/public/research/WTDF/2019/WTDF_20190320v30001.nc,0,0,0,0,0,0,0,0,0,0,417,0,0,0,0,0,1023
 /Net/samosproc/data/public/research/WTDF/2019/WTDF_20190310v30001.nc,0,537,0,0,0,0,0,0,0,0,0,0,0,0,0,0,903
+/Net/samosproc/data/public/research/WTDF/2019/WTDF_20190327v30001.nc,0,0,0,0,0,0,0,0,0,0,511,0,0,0,0,0,929
+/Net/samosproc/data/public/research/WTDF/2019/WTDF_20190328v30001.nc,0,0,0,0,0,0,0,0,0,0,363,0,0,0,0,0,1077
 /Net/samosproc/data/public/research/WTDF/2019/WTDF_20190317v30001.nc,0,0,0,0,0,0,0,0,0,0,68,0,0,0,0,0,1372
 /Net/samosproc/data/public/research/WTDF/2019/WTDF_20190318v30001.nc,0,0,0,0,0,0,0,0,0,0,219,0,0,0,0,0,1221
 /Net/samosproc/data/public/research/WTDF/2019/WTDF_20190308v30001.nc,0,0,0,0,0,0,0,0,0,0,125,0,0,0,0,0,1312
@@ -13309,6 +13312,7 @@ filename,b'A',b'B',b'C',b'D',b'E',b'F',b'G',b'H',b'I',b'J',b'K',b'L',b'M',b'N',b
 /Net/samosproc/data/public/research/WTEC/2019/WTEC_20190321v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1440
 /Net/samosproc/data/public/research/WTEC/2019/WTEC_20190301v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,460
 /Net/samosproc/data/public/research/WTEC/2019/WTEC_20190311v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1439
+/Net/samosproc/data/public/research/WTEC/2019/WTEC_20190329v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1134
 /Net/samosproc/data/public/research/WTEC/2019/WTEC_20190326v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1440
 /Net/samosproc/data/public/research/WTEC/2019/WTEC_20190319v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1344
 /Net/samosproc/data/public/research/WTEC/2019/WTEC_20190316v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1439
@@ -13320,6 +13324,8 @@ filename,b'A',b'B',b'C',b'D',b'E',b'F',b'G',b'H',b'I',b'J',b'K',b'L',b'M',b'N',b
 /Net/samosproc/data/public/research/WTEC/2019/WTEC_20190318v30001.nc,0,0,0,0,0,0,113,0,0,0,0,0,0,0,0,0,1326
 /Net/samosproc/data/public/research/WTEC/2019/WTEC_20190308v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1439
 /Net/samosproc/data/public/research/WTEC/2019/WTEC_20190307v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1440
+/Net/samosproc/data/public/research/WTEC/2019/WTEC_20190327v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1440
+/Net/samosproc/data/public/research/WTEC/2019/WTEC_20190328v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1439
 /Net/samosproc/data/public/research/WTEC/2013/WTEC_20130911v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1440
 /Net/samosproc/data/public/research/WTEC/2013/WTEC_20130822v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1440
 /Net/samosproc/data/public/research/WTEC/2013/WTEC_20130519v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1438
@@ -14214,6 +14220,8 @@ filename,b'A',b'B',b'C',b'D',b'E',b'F',b'G',b'H',b'I',b'J',b'K',b'L',b'M',b'N',b
 /Net/samosproc/data/public/research/WTED/2019/WTED_20190213v30001.nc,0,0,0,0,0,0,0,0,0,0,24,0,0,0,0,0,306
 /Net/samosproc/data/public/research/WTED/2019/WTED_20190223v30001.nc,0,0,0,0,0,0,0,0,0,0,180,0,0,0,0,0,1260
 /Net/samosproc/data/public/research/WTED/2019/WTED_20190310v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1440
+/Net/samosproc/data/public/research/WTED/2019/WTED_20190327v30001.nc,0,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0,1368
+/Net/samosproc/data/public/research/WTED/2019/WTED_20190328v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1440
 /Net/samosproc/data/public/research/WTED/2019/WTED_20190214v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1415
 /Net/samosproc/data/public/research/WTED/2019/WTED_20190224v30001.nc,0,0,0,0,0,0,0,0,0,0,31,0,0,0,0,0,1409
 /Net/samosproc/data/public/research/WTED/2019/WTED_20190317v30001.nc,0,0,0,0,0,0,0,0,0,0,57,0,0,0,0,0,1383
@@ -14228,6 +14236,7 @@ filename,b'A',b'B',b'C',b'D',b'E',b'F',b'G',b'H',b'I',b'J',b'K',b'L',b'M',b'N',b
 /Net/samosproc/data/public/research/WTED/2019/WTED_20190225v30001.nc,0,0,0,0,0,0,116,0,0,0,0,0,0,0,0,0,1324
 /Net/samosproc/data/public/research/WTED/2019/WTED_20190306v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,130
 /Net/samosproc/data/public/research/WTED/2019/WTED_20190309v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1440
+/Net/samosproc/data/public/research/WTED/2019/WTED_20190329v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1439
 /Net/samosproc/data/public/research/WTED/2019/WTED_20190326v30001.nc,0,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,1418
 /Net/samosproc/data/public/research/WTED/2017/WTED_20170410v30001.nc,0,0,0,0,0,0,34,0,0,0,100,0,0,0,0,0,1306
 /Net/samosproc/data/public/research/WTED/2017/WTED_20170712v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1440
@@ -17801,7 +17810,9 @@ filename,b'A',b'B',b'C',b'D',b'E',b'F',b'G',b'H',b'I',b'J',b'K',b'L',b'M',b'N',b
 /Net/samosproc/data/public/research/WTEG/2016/WTEG_20160405v30001.nc,0,0,0,0,0,0,0,0,0,0,134,0,0,0,0,11,1295
 /Net/samosproc/data/public/research/WTEG/2016/WTEG_20160708v30001.nc,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,1417
 /Net/samosproc/data/public/research/WTEG/2016/WTEG_20160707v30001.nc,0,0,0,0,0,0,0,0,0,0,23,0,0,0,0,0,1417
+/Net/samosproc/data/public/research/WTEG/2019/WTEG_20190329v30001.nc,0,0,0,0,0,0,0,0,0,0,272,0,0,0,0,0,1168
 /Net/samosproc/data/public/research/WTEG/2019/WTEG_20190212v30001.nc,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,1365
+/Net/samosproc/data/public/research/WTEG/2019/WTEG_20190328v30001.nc,0,0,0,0,0,0,0,0,0,0,8,0,0,0,0,0,11
 /Net/samosproc/data/public/research/WTEG/2019/WTEG_20190213v30001.nc,0,0,0,0,0,0,46,0,0,0,0,0,0,0,0,0,889
 /Net/samosproc/data/public/research/WTEG/2019/WTEG_20190210v30001.nc,0,0,0,0,0,0,0,0,0,0,141,0,0,0,0,0,1299
 /Net/samosproc/data/public/research/WTEG/2019/WTEG_20190208v30001.nc,0,0,0,0,0,0,0,0,0,0,7,0,0,0,0,0,1433
@@ -26823,6 +26834,7 @@ filename,b'A',b'B',b'C',b'D',b'E',b'F',b'G',b'H',b'I',b'J',b'K',b'L',b'M',b'N',b
 /Net/samosproc/data/public/research/ZCYL5/2019/ZCYL5_20190301v30001.nc,0,0,0,0,0,0,0,0,0,0,155,0,0,0,0,0,1285
 /Net/samosproc/data/public/research/ZCYL5/2019/ZCYL5_20190110v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1440
 /Net/samosproc/data/public/research/ZCYL5/2019/ZCYL5_20190321v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1439
+/Net/samosproc/data/public/research/ZCYL5/2019/ZCYL5_20190327v30001.nc,0,0,0,0,0,0,0,0,0,0,148,0,0,0,0,0,875
 /Net/samosproc/data/public/research/ZCYL5/2019/ZCYL5_20190116v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1439
 /Net/samosproc/data/public/research/ZCYL5/2019/ZCYL5_20190119v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1439
 /Net/samosproc/data/public/research/ZCYL5/2019/ZCYL5_20190109v30001.nc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1440
